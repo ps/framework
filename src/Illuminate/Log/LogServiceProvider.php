@@ -20,7 +20,7 @@ class LogServiceProvider extends ServiceProvider
     }
 
     /**
-     * Create the logger.
+     * Create the logger. Adding test comment.
      *
      * @return \Illuminate\Log\Writer
      */
