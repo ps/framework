@@ -30,6 +30,8 @@ class LogServiceProvider extends ServiceProvider
             new Monolog($this->channel()), $this->app['events']
         );
 
+        $log->getMonolog()->pushProcessor(new \Monolog\Processor\IntrospectionProcessor);
+
         if ($this->app->hasMonologConfigurator()) {
             call_user_func($this->app->getMonologConfigurator(), $log->getMonolog());
         } else {
